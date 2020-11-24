@@ -40,7 +40,7 @@ def check_file(file_path):
         os.makedirs(base_path)
     if not os.path.exists(file_path):
         with open(file_path, 'w') as f:
-            f.write('代码,股票,2020年,2021年,2022年,增速1,增速2,增速3,总市值,股价,低,中,高,PE,空间,预期差,货币资金,应收帐款,存货,在建工程,商誉,短期借款,相关行业 \n')
+            f.write('代码,股票,2020年,2021年,2022年,增速1,增速2,增速3,总市值,股价,低,中,高,PE,空间,预期差,相关行业 \n')
 
 def save_data(data):
     save_name = '{}.csv'.format(time.strftime('%Y-%m-%d'))

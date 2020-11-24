@@ -104,10 +104,7 @@ def get_data(browser=None, url='', multiple=25):
     else:
         growth_tate_3 = 0
 
-
-    # hqzs = get_hqzs(browser, code)
     gszl = get_gszl(browser, code)
-    cwfx = get_cwfx_dfcf(browser, code)
     data_list = [
         code,
         name,
@@ -125,12 +122,6 @@ def get_data(browser=None, url='', multiple=25):
         str(multiple),
         str(baifenbi)+'%',
         str(expect_diff),
-        str(cwfx['hbzj']),
-        str(cwfx['yszk']),
-        str(cwfx['ch']),
-        str(cwfx['hjzjgc']),
-        str(cwfx['sy']),
-        str(cwfx['dqjk']),
         str(gszl['sshy']).strip(),
         # str(hqzs['zyyw']).strip()
     ]
