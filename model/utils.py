@@ -26,7 +26,7 @@ def get_code_str(code):
         code_str = "sh{}".format(code)
     elif code_prefix in sz:
         code_str = "sz{}".format(code)
-    
+
     return code_str
 
 def count_num(number, total_price, price, multiple):
@@ -40,7 +40,7 @@ def check_file(file_path):
         os.makedirs(base_path)
     if not os.path.exists(file_path):
         with open(file_path, 'w') as f:
-            f.write('代码,股票,2020年,2021年,2022年,增速1,增速2,增速3,总市值,股价,低,中,高,PE,空间,预期差,相关行业 \n')
+            f.write('代码,股票,2020年,2021年,2022年,增速1,增速2,增速3,总市值,股价,低,中,高,PE,空间,预期差,成交额,相关行业 \n')
 
 def save_data(data):
     save_name = '{}.csv'.format(time.strftime('%Y-%m-%d'))

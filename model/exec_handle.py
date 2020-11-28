@@ -32,6 +32,9 @@ def get_data(browser=None, url='', multiple=25):
     total_price = browser.find_element_by_xpath('//*[@id="tvalue"]')
     total_price = total_price.text
 
+    tamounttotal = browser.find_element_by_xpath('//*[@id="tamounttotal"]')
+    tamounttotal_text = tamounttotal.text
+
     browser.switch_to_default_content()
     browser.switch_to_frame('dataifm')
 
@@ -122,6 +125,7 @@ def get_data(browser=None, url='', multiple=25):
         str(multiple),
         str(baifenbi)+'%',
         str(expect_diff),
+        tamounttotal_text,
         str(gszl['sshy']).strip(),
         # str(hqzs['zyyw']).strip()
     ]
@@ -140,7 +144,7 @@ def run(item=None, browser=None, url_base=None):
 
     code, multiple =  item.split(',')
     url = url_base.format(code)
-    
+
     data = None
     log_text = None
     # data = get_data(browser=browser, url=url, multiple=multiple)
