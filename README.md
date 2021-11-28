@@ -38,10 +38,10 @@ for(var i=0; i<code_list.length; i++)
 // ----------------------------------------
 // 同花顺问财：
 
-code_list = document.getElementsByClassName('static_tbody_table')[0].rows
+code_list = document.getElementsByClassName('graph operate')
 codes_str = ''
 for(var i=0; i<code_list.length; i++)
 {
-    codes_str += code_list[i].cells[2].children[0].textContent + ','
+    codes_str += code_list[0].children[0].children[1].textContent + ','
 }
 ```
